@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+:root {
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+img,
+picture,
+video,
+canvas {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-size: 15px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+main {
+    max-width: 95%;
+    margin: 60px auto;
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.profile {
+    display: flex;
+}
+
+.profile-content {
+    font-size: 0.9em;
+}
+
+img {
+    margin-right: 20px;
+    margin-bottom: 25px;
+    border-radius: 50%; 
+}
+
+article {
+    padding: 40px;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+article::before {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    z-index: -1;
+}
+
+article p {
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    line-height: 1.4em;
+}
+
+.card-1 {
+    background-color: var(--Moderate-violet);
+}
+
+.card-2 {
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+.card-3 {
+    background-color: var(--White);
+}
+
+.card-4 {
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+.card-5 {
+    background-color: var(--White);
+}
+
+.card-1,
+.card-2,
+.card-4 {
+    color: var(--White);
+}
+
+.card-3,
+.card-5 {
+    color: var(--Very-dark-blackish-blue);
+}
+
+blockquote {
+    font-weight: 500;
+    opacity: 50%;
+}
+
+article h3 {
+    font-weight: 500;
+    opacity: 70%;
+}
+
+.card-4 img {
+    border: 3px solid var(--Moderate-violet);
+}
+
+.card-1 img {
+    border: 3px solid plum;
+}
+
+@media only screen and (min-width: 768px) {
+
+    article h2,
+    article h3,
+    article blockquote {
+        font-size: 0.9em;
+    }
+
+    article p {
+        font-size: 1.4em;
+    }
+
+    article img,
+    article p {
+        margin-bottom: 20px;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    main {
+        grid-template-columns: repeat(4, minmax(200px, 2fr));
+        max-width: 70%;
+        margin: 0;
+        gap: 2rem;
+    }
+
+    .card-1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .card-2 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .card-3 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .card-4 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .card-5 {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 4; /* This makes the card-5 span 3 rows */
+    }
+}
+
+.verified {
+    display: flex;
+    align-items: center;
+}
+
+.verified::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    margin-right: 8px;
+}
+
+footer {
+    background-color: var(--Very-dark-grayish-blue);
+    color: var(--White);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: var(--White);
+    text-decoration: none;
+    font-weight: bold;
+    transition: text-decoration 0.3s, color 0.3s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--Moderate-violet);
+}

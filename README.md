@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution: [Solution](https://github.com/bossthekhani/testimonials_grid_section)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site: [Vercel](https://testimonials-grid-section-one-chi.vercel.app/)
 
 ## My process
 
